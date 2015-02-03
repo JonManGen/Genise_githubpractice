@@ -1,0 +1,1 @@
+Chapter 1 is all about installing GitHub on different OS, after installing it is how to setup GitHub. And show to every the importance of GitHub and how does it work. On the last part it displays some of the basic commands and their definition to help the first-time users.
