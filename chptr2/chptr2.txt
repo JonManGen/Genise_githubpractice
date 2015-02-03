@@ -1,1 +1,5 @@
-test
+Initialized git:
+git init
+
+Cloning:
+git clone[url] ex. 
