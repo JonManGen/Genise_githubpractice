@@ -1,0 +1,101 @@
+
+ git clone john@githost:simplegit.git
+Initialized empty Git repository in /home/john/simplegit/.git/
+ cd simplegit/
+ vim lib/simplegit.rb
+ git commit -am 'removed invalid default value'
+[master 738ee87] removed invalid default value
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+ git clone jessica@githost:simplegit.git
+Initialized empty Git repository in /home/jessica/simplegit/.git/
+
+ cd simplegit/
+ vim TODO
+ git commit -am 'add reset task'
+[master fbff5bc] add reset task
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ 
+
+ git push origin master
+1edee6b..fbff5bc  master -> master
+
+git push origin master
+To john@githost:simplegit.git
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to 'john@githost:simplegit.git'
+ git log --no-merges issue54..origin/master
+commit 738ee872852dfaa9d6634e0dea7a324040193016
+Author: John Smith <jsmith@example.com>
+Date:   Fri May 29 16:01:27 2009 -0700
+git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+
+git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+
+git merge issue54
+Updating fbff5bc..4af4298
+Fast forward
+ README           |    1 +
+ lib/simplegit.rb |    6 +++++-
+ 2 files changed, 6 insertions(+), 1 deletions(-)
+
+git merge origin/master
+Auto-merging lib/simplegit.rb
+Merge made by recursive.
+ lib/simplegit.rb |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+ 
+ git push origin master
+72bbc59..8059c15  master -> master
+ 
+ git checkout -b featureA
+Switched to a new branch 'featureA'
+ vim lib/simplegit.rb
+ git commit -am 'add limit to log function'
+[featureA 3300904] add limit to log function
+ 1 files changed, 1 insertions(+), 1 deletions(-) 
+ 
+  git push -u origin featureA
+ * [new branch]      featureA -> featureA
+ 
+ git fetch origin
+
+ * [new branch]      featureBee -> origin/featureBee
+ 
+ git merge origin/featureBee
+Auto-merging lib/simplegit.rb
+Merge made by recursive.
+ lib/simplegit.rb |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+ 
+ git push -u origin featureB:featureBee
+   fba9af8..cd685d1  featureB -> featureBee
+ 
+ git checkout -b topicA
+ (work)
+ git commit
+ (work)
+ git commit
+ 
+ git format-patch -M origin/master
+0001-add-limit-to-log-function.patch
+0002-changed-log-output-to-30-from-25.patch
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
